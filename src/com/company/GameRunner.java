@@ -19,8 +19,8 @@ public class GameRunner {
 
             Move humanMove = humanPlayer.play();
             Move computerMove = computerPlayer.play();
-            GamePrinter.printComputerMove(computerMove);
 
+            GamePrinter.printComputerMove(computerMove);
 
             Result result = game.winnerMove(humanMove, computerMove);
 
@@ -31,7 +31,7 @@ public class GameRunner {
                 game.increaseHumanScore();
             }
 
-            GamePrinter.printResult(result);
+            GamePrinter.printResult(result,game);
         }
 
         GamePrinter.printWinner(game.getWinner());

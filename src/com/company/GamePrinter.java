@@ -5,6 +5,7 @@ public class GamePrinter {
 
     public static void printInstructions(){
 
+        System.out.println("");
         System.out.println("Choose Rock(0), Paper(1) or Scissors(2).");
 
 
@@ -19,13 +20,17 @@ public class GamePrinter {
     }
 
 
-    public static void printResult(Result result){
+    public static void printResult(Result result, GameState game){
         if (result.equals(Result.COMPUTER) || result.equals(Result.HUMAN)) {
             System.out.println(result.name() + " has won.");
         }
         else {
             System.out.println("Draw.");
         }
+
+        System.out.println("Current score: ");
+        System.out.println("Human score: " + game.getHumanScore());
+        System.out.println("Computer score: " + game.getComputerScore());
 
 
     }
