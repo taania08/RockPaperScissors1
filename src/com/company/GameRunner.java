@@ -19,6 +19,8 @@ public class GameRunner {
 
             Move humanMove = humanPlayer.play();
             Move computerMove = computerPlayer.play();
+            GamePrinter.printComputerMove(computerMove);
+
 
             Result result = game.winnerMove(humanMove, computerMove);
 

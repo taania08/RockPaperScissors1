@@ -11,7 +11,11 @@ public class GamePrinter {
     }
 
     public static void optionNotValid() {
-        System.out.println("Introduce a number between 0 and 4.");
+        System.out.println("Introduce a number between 0 and 2.");
+    }
+
+    public static void printComputerMove(Move move){
+        System.out.println("The computer chose " + move);
     }
 
 

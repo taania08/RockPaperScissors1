@@ -9,12 +9,19 @@ public class HumanPlayer {
 
     public Move play(){
 
-        GamePrinter.printInstructions();
-        int num = scanner.nextInt();
+        int num = 0;
 
-        if (num<0 || num>3){
-            GamePrinter.optionNotValid();
-        }
+        do{
+            GamePrinter.printInstructions();
+            num = scanner.nextInt();
+
+            if (num<0 || num>2){
+                GamePrinter.optionNotValid();
+            }
+
+        }while (num<0 || num>2);
+
+
 
         switch (num){
             case 0: return Move.ROCK;
