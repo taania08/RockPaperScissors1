@@ -5,7 +5,7 @@ public class GamePrinter {
 
     public static void printInstructions(){
 
-        System.out.println("Escoge Piedra(0), Papel(1), Tijera(2), Lagarto(3) o Spock(4)");
+        System.out.println("Choose Rock(0), Paper(1) or Scissors(2).");
 
 
     }
@@ -16,7 +16,14 @@ public class GamePrinter {
 
 
     public static void printResult(Result result){
-        System.out.println( result.name() + " has won.");
+        if (result.equals(Result.COMPUTER) || result.equals(Result.HUMAN)) {
+            System.out.println(result.name() + " has won.");
+        }
+        else {
+            System.out.println("Draw.");
+        }
+
+
     }
 
     public static void printWinner(Result result){

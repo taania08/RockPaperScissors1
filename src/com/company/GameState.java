@@ -37,7 +37,24 @@ public class GameState {
         if (human.equals(Move.ROCK)  && computer.equals(Move.PAPER)){
             return Result.COMPUTER ;
         }
-        return null;
+        else if (human.equals(Move.ROCK) && computer.equals(Move.SCISSORS)){
+            return Result.HUMAN;
+        }
+        else if (human.equals(Move.PAPER) && computer.equals(Move.SCISSORS)){
+            return Result.COMPUTER;
+        }
+        else if (human.equals(Move.PAPER) && computer.equals(Move.ROCK)){
+            return Result.HUMAN;
+        }
+        else if (human.equals(Move.SCISSORS) && computer.equals(Move.PAPER)){
+            return Result.HUMAN;
+        }
+        else if (human.equals(Move.SCISSORS) && computer.equals(Move.ROCK)){
+            return Result.COMPUTER;
+        }
+        else {
+            return Result.DRAW;
+        }
     }
 
     public Result getWinner(){
